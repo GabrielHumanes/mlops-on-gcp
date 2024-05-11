@@ -29,12 +29,12 @@ steps:
 - name: 'gcr.io/$PROJECT_ID/tfx-cli'
   args: ['pipeline', 'create', '--engine', 'kubeflow', '--pipeline_path', '$_PIPELINE_DSL', '--endpoint', '$_ENDPOINT']
   env: 
-  - 'GCP_REGION=$us-west1-c'  
+  - 'GCP_REGION=$us-central1-a'  
   - 'PROJECT_ID=$PROJECT_ID'
   - 'PIPELINE_NAME=${tfx_covertype_continuous_training}-${TAG_NAME}'
   - 'MODEL_NAME=$tfx_covertype_classifier'  
-  - 'ARTIFACT_STORE_URI=$gs://qwiklabs-gcp-00-c1fd5eb4a085-kubeflowpipelines-default/'
-  - 'CUSTOM_SERVICE_ACCOUNT=$tfx-tuner-caip-service-account@qwiklabs-gcp-00-c1fd5eb4a085.iam.gserviceaccount.com'
+  - 'ARTIFACT_STORE_URI=$gs://qwiklabs-gcp-03-e45086a566ed-kubeflowpipelines-default/'
+  - 'CUSTOM_SERVICE_ACCOUNT=$tfx-tuner-caip-service-account@qwiklabs-gcp-03-e45086a566ed.iam.gserviceaccount.com'
   - 'DATA_ROOT_URI=$gs://cloud-training/OCBL203/workshop-datasets'
   - 'KUBEFLOW_TFX_IMAGE=gcr.io/$PROJECT_ID/$lab-03-tfx-image:$TAG_NAME'
   - 'RUNTIME_VERSION=_$2.3'
